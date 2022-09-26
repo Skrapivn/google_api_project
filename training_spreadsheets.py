@@ -64,7 +64,7 @@ def create_spreadsheet(service):
 def set_user_permissions(spreadsheetId, credentials):
     permissions_body={'type': 'user', # Тип учетных данных.
                       'role': 'writer', # Права доступа для учётной записи.
-                      'emailAddress': 'skrapivn@gmail.com'} # Ваш личный гугл-аккаунт.
+                      'emailAddress': EMAIL_USER} # Ваш личный гугл-аккаунт.
     
     # Создаётся экземпляр класса Resource для Google Drive API.
     drive_service = discovery.build('drive', 'v3', credentials=credentials)
