@@ -1,19 +1,19 @@
-# google_api_project
+# «Бюджет путешествий»
 
-«Бюджет путешествий». Эта программа будет управлять гугл-таблицей c расчётом расходов на путешествия.
+Эта программа будет управлять гугл-таблицей c расчётом расходов на путешествия используя **API google**.
 
-Задачи вашего кода будут следующие:
+Задачи данного кода будут следующие:
 
 - авторизоваться в Google Sheets;
 - создать таблицу;
 - выдать права доступа к таблице;
 - провести манипуляции с таблицей: прочитать её, сделать новые записи, удалить.
 
-### Как запустить проект
+## Как запустить проект
 
 Клонировать репозиторий и перейти в него в командной строке:
 
-```
+```python
 git clone git@github.com:Skrapivn/google_api_project.git
 ```
 
@@ -39,15 +39,15 @@ pip install -r requirements.txt
 
 Необходимо изменить ключи, при необходимости, в файле .env.example и переименовать файл в .env:
 
-```
+```python
 EMAIL=example@gmail.com - Ваш email от учетной записи Гугл
 ```
 
-Файл необходимо заполнить согласно полученного Json ключа в Google Cloud Platform создав сервисный аккаунт. <https://console.cloud.google.com/projectselector2/home/dashboard>
+Далее файл необходимо заполнить согласно полученного Json ключа в Google Cloud Platform создав сервисный аккаунт. <https://console.cloud.google.com/projectselector2/home/dashboard>
 
-И подключить два API - Google Drive API и Google Sheets API.
+И подключить два API - ```Google Drive API``` и ```Google Sheets API```.
 
-```
+```python
 TYPE=type
 PROJECT_ID=project_id
 PRIVATE_KEY_ID=private_key_id
