@@ -103,7 +103,13 @@ def spreadsheet_update_values(service, spreadsheetId):
     # Выполнение запроса.
     request.execute()
 
+# def read_values(service, spreadsheet_id):
+#     request = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range='Отпуск 2077!A1:F20').execute()
+#     print(request.get('values', []))
+
+
 service, credentials = auth()
 spreadsheetId = create_spreadsheet(service)
 set_user_permissions(spreadsheetId, credentials)
-spreadsheet_update_values(service, spreadsheetId) 
+spreadsheet_update_values(service, spreadsheetId)
+# read_values(service, spreadsheetId)
