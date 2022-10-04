@@ -66,6 +66,7 @@ CLIENT_X509_CERT_URL=https://
 python main.py -h
 ```
 
+```python
 Бюджет путешествий
 
 options:
@@ -77,6 +78,7 @@ options:
   -ls, --list           Вывести все spreadsheets
   -u UPDATE, --update UPDATE
                         Обновить данные табилицы
+```
 
 ### Примеры
 
@@ -98,6 +100,4 @@ python main.py -u "Транспорт, Билеты на самолёт, 2, 2000
 python main.py -i ID_таблицы -u "Транспорт, Билеты на самолёт, 2, 15000, =2*15000"
 ```
 
-Автор:
-
-[Sergey K.](https://github.com/skrapivn/)
+Автор: [Sergey K.](https://github.com/skrapivn/)
