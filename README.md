@@ -51,13 +51,51 @@ EMAIL=example@gmail.com - Ваш email от учетной записи Гугл
 TYPE=type
 PROJECT_ID=project_id
 PRIVATE_KEY_ID=private_key_id
-PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\-----END PRIVATE KEY-----\n
+PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\-----END PRIVATE KEY-----\n"
 CLIENT_EMAIL=xxx.gserviceaccount.com
 CLIENT_ID=client_id
 AUTH_URI=https://
 TOKEN_URI=https://
 AUTH_PROVIDER_X509_CERT_URL=https://
 CLIENT_X509_CERT_URL=https://
+```
+
+Для вывода справки, в которой описаны все возможные аргументы для запуска приложения:
+
+```python
+python main.py -h
+```
+
+Бюджет путешествий
+
+options:
+  -h, --help            show this help message and exit
+  -c CREATE, --create CREATE
+                        Создать файл - введите "имя, бюджет"
+  -cl, --clear_all      Удалить все spreadsheets
+  -i ID, --id ID        Указать id spreadsheet
+  -ls, --list           Вывести все spreadsheets
+  -u UPDATE, --update UPDATE
+                        Обновить данные табилицы
+
+### Примеры
+
+Создаем таблицу:
+
+```python
+python main.py -c "Греция, 70000"
+```
+
+Обновляем последнюю из созданных таблиц:
+
+```python
+python main.py -u "Транспорт, Билеты на самолёт, 2, 2000, =2*2000"
+```
+
+Если необходимо обновить определенный файл, то необходимо использовать ID документа:
+
+```python
+python main.py -i ID_таблицы -u "Транспорт, Билеты на самолёт, 2, 15000, =2*15000"
 ```
 
 Автор:
